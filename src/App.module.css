@@ -22,6 +22,10 @@
   display: none;
 }
 
+.navbarOpen {
+  display: block;
+}
+
 .navbar {
   position: absolute;
   top: 0;
