@@ -1,0 +1,71 @@
+.containerNavbar {
+  background: #2C2C2C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+  box-shadow: 0 0 1rem var(--color-alert);
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--color-secondary);
+}
+
+.navbarIconOpen {
+  font-size: 2.5rem;
+  color: var(--color-secondary);
+}
+
+.navbarClose {
+  display: none;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  background: var(--color-bg);
+  box-shadow: 0 0 1rem var(--color-alert);
+  height: 100vh;
+  padding: 2rem 3rem;
+}
+
+.navbarIconClose {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-block: 2rem;
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+
+.navbarList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.8rem;
+}
+
+.navbarList a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.navbar a:hover {
+  color: var(--color-secondary);
+}
+
+.navbar .btnHighlight {
+  margin-block-start: 2rem;
+  width: 100%;
+  padding: .2rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: bold;
+}
