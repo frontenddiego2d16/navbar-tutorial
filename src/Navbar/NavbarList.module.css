@@ -1,3 +1,4 @@
+/* navbar */
 .navbarClose {
   display: none;
 }
@@ -8,7 +9,7 @@
   right: 0;
   width: 50%;
   background: var(--color-bg);
-  box-shadow: 0 0 1rem var(--color-alert);
+  box-shadow: 0 0 1rem var(--color-secondary);
   height: 100vh;
   padding: 2rem 3rem;
 }

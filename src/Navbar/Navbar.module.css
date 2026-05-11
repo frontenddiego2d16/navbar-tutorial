@@ -1,3 +1,4 @@
+/* containerNavbar */
 .containerNavbar {
   background: #2C2C2C;
   display: flex;
@@ -6,9 +7,9 @@
   padding: 3rem;
   position: relative;
   box-shadow:
-    0 0 10px var(--color-alert),
-    0 0 20px var(--color-alert),
-    0 0 10px var(--color-alert);
+    0 0 10px var(--color-secondary),
+    0 0 20px var(--color-secondary),
+    0 0 10px var(--color-secondary);
 }
 
 .title {
