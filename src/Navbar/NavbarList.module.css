@@ -3,6 +3,10 @@
   display: none;
 }
 
+.navbarOpen {
+  display: block;
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -60,10 +64,6 @@
 }
 
 @media(min-width: 768px) {
-  .navbarIconOpen {
-    display: none;
-  }
-
   .navbarIconClose {
     display: none;
   }

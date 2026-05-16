@@ -3,7 +3,7 @@ import styles from './NavbarList.module.css'
 const NavbarList = ({ isOpen, setIsOpen }) => {
 
   return (
-    <nav className={`${styles.navbar} ${isOpen ? styles.navbarIconOpen : styles.navbarClose}`}>
+    <nav className={`${styles.navbar} ${isOpen ? styles.navbarOpen : styles.navbarClose}`}>
 
       <div className={styles.navbarIconClose}
         onClick={() => setIsOpen(!isOpen)}
