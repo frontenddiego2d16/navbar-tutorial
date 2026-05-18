@@ -25,8 +25,8 @@ function Navbar() {
 
   return (
     <>
-      <header className="w-full bg-gray-800 flex justify-between p-5 shadow-lg shadow-secondary relative md:items-center">
-        <h2 className="drop-shadow-lg drop-shadow-secondary text-2xl">
+      <header className=" bg-gray-800 flex justify-between p-5 shadow-lg shadow-secondary relative md:items-center">
+        <h2 className="drop-shadow-lg drop-shadow-secondary text-2xl ">
           Navbar
         </h2>
 
@@ -37,7 +37,7 @@ function Navbar() {
         </div>
 
         <nav className={
-          `p-5 absolute top-0 right-0 w-1/2 h-screen bg-black/80 shadow-lg shadow-accent flex flex-col gap-10 transition-all ease-in-out duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-96'} md:relative md:translate-x-0 md:bg-transparent md:w-auto md:shadow-none md:flex-row md:h-auto`}
+          `p-5 fixed top-0 w-1/2 h-screen bg-black/80 shadow-lg shadow-accent flex flex-col gap-10 transition-all ease-in-out duration-500 ${isOpen ? 'translate-x-0 right-0' : 'translate-x-full -right-4'} md:relative md:translate-x-0 md:bg-transparent md:w-auto md:shadow-none md:flex-row md:h-auto`}
         >
 
           <div className="flex justify-end drop-shadow-xl drop-shadow-alert text-2xl md:hidden"
