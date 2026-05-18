@@ -56,6 +56,7 @@ function Navbar() {
                       'text-secondary shadow-secondary'
                       :
                       'text-primary shadow-alert'}
+                      hover:text-secondary hover:shadow-secondary transition-all ease-in-out duration-500
                   `}
                   onClick={() => handleSelect(link.name)}
                 >
@@ -65,7 +66,9 @@ function Navbar() {
             }
           </ul>
 
-          <button className="mt-3 text-accent rounded-xl border-2 border-secondary py-1 px-2 font-semibold shadow-lg shadow-secondary md:mt-0">
+          <button className="mt-3 text-accent rounded-xl border-2 border-secondary py-1 px-2 font-semibold shadow-lg shadow-secondary md:mt-0
+          hover:text-base-text hover:bg-primary transition-all hover:shadow-primary ease-in-out duration-500
+          ">
             <a href="#">
               Log in
             </a>
