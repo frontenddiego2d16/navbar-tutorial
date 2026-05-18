@@ -5,12 +5,23 @@ import { useState } from "react";
 
 function Navbar() {
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSelect, setIsSelect] = useState('Home')
+
   const Links = [
     { id: 1, name: 'Home' },
     { id: 2, name: 'Categories' },
     { id: 3, name: 'Profile' },
     { id: 4, name: 'About' },
   ]
+
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleSelect = (text) => {
+    setIsSelect(text)
+  }
 
   return (
     <>
@@ -19,27 +30,42 @@ function Navbar() {
           Navbar
         </h2>
 
-        <div className="drop-shadow-lg drop-shadow-alert text-2xl">
+        <div className="drop-shadow-lg drop-shadow-alert text-2xl"
+          onClick={handleIsOpen}
+        >
           <i className="fa-solid fa-bars"></i>
         </div>
 
-        <nav className="p-5 absolute top-0 right-0 w-1/2 h-screen bg-black/80 shadow-lg shadow-accent  flex-col gap-10 hidden"
+        <nav className={
+          `p-5 absolute top-0 right-0 w-1/2 h-screen bg-black/80 shadow-lg shadow-accent flex flex-col gap-10 transition-all ease-in-out duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-96'}`}
         >
-          <div className="flex justify-end drop-shadow-xl drop-shadow-alert text-2xl">
+
+          <div className="flex justify-end drop-shadow-xl drop-shadow-alert text-2xl"
+            onClick={handleIsOpen}
+          >
             <i className="fa-solid fa-x"></i>
           </div>
 
-          <ul className="flex flex-col items-center gap-5 text-lg">
+          <ul className="flex flex-col items-center gap-10 text-lg">
             {
               Links.map(link =>
-                <li key={link.name} className="text-primary text-shadow-2xs text-shadow-secondary">
+                <li key={link.name}
+                  className=
+                  {`shadow-xl font-semibold
+                  ${isSelect === link.name ?
+                      'text-secondary shadow-secondary'
+                      :
+                      'text-primary shadow-alert'}
+                  `}
+                  onClick={() => handleSelect(link.name)}
+                >
                   <NavbarList name={link.name} />
                 </li>
               )
             }
           </ul>
 
-          <button>
+          <button className="mt-3 text-accent rounded-xl border-2 border-secondary py-1 px-2 font-semibold shadow-lg shadow-secondary">
             Log in
           </button>
         </nav>
