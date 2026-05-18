@@ -25,28 +25,28 @@ function Navbar() {
 
   return (
     <>
-      <header className="bg-gray-800 flex justify-between p-5 shadow-lg shadow-secondary relative">
+      <header className="w-full bg-gray-800 flex justify-between p-5 shadow-lg shadow-secondary relative md:items-center">
         <h2 className="drop-shadow-lg drop-shadow-secondary text-2xl">
           Navbar
         </h2>
 
-        <div className="drop-shadow-lg drop-shadow-alert text-2xl"
+        <div className="drop-shadow-lg drop-shadow-alert text-2xl md:hidden"
           onClick={handleIsOpen}
         >
           <i className="fa-solid fa-bars"></i>
         </div>
 
         <nav className={
-          `p-5 absolute top-0 right-0 w-1/2 h-screen bg-black/80 shadow-lg shadow-accent flex flex-col gap-10 transition-all ease-in-out duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-96'}`}
+          `p-5 absolute top-0 right-0 w-1/2 h-screen bg-black/80 shadow-lg shadow-accent flex flex-col gap-10 transition-all ease-in-out duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-96'} md:relative md:translate-x-0 md:bg-transparent md:w-auto md:shadow-none md:flex-row md:h-auto`}
         >
 
-          <div className="flex justify-end drop-shadow-xl drop-shadow-alert text-2xl"
+          <div className="flex justify-end drop-shadow-xl drop-shadow-alert text-2xl md:hidden"
             onClick={handleIsOpen}
           >
             <i className="fa-solid fa-x"></i>
           </div>
 
-          <ul className="flex flex-col items-center gap-10 text-lg">
+          <ul className="flex flex-col items-center gap-10 text-lg md:flex-row">
             {
               Links.map(link =>
                 <li key={link.name}
@@ -65,8 +65,10 @@ function Navbar() {
             }
           </ul>
 
-          <button className="mt-3 text-accent rounded-xl border-2 border-secondary py-1 px-2 font-semibold shadow-lg shadow-secondary">
-            Log in
+          <button className="mt-3 text-accent rounded-xl border-2 border-secondary py-1 px-2 font-semibold shadow-lg shadow-secondary md:mt-0">
+            <a href="#">
+              Log in
+            </a>
           </button>
         </nav>
 
